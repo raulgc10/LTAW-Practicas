@@ -6,6 +6,7 @@ const PUERTO = 3333;
 
 //-- Crear el servidor
 const server = http.createServer((req, res) => {
+    
     fs.readFile('./index.html', (err, data) => {
       if (err) {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
@@ -16,7 +17,8 @@ const server = http.createServer((req, res) => {
       res.write(data);
       return res.end();
     });
-  });
+    
+});
 
 //-- Activar el servidor: ¡Que empiece la fiesta!
 server.listen(PUERTO);
