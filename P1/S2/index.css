@@ -1,4 +1,32 @@
 h1 {
     color:darkviolet;
     text-align: center;
+    font-family: fuente, Arial, Helvetica, sans-serif;
+
+}
+body{
+    background-color: black;
+}
+
+h2 {
+    color:darkviolet;
+    text-align: center;
+    font-family: fuente, Arial, Helvetica, sans-serif;
+}
+
+@font-face{
+    font-family: "fuente";
+    src: url(fuente.otf);
+}
+
+#psx{
+    background-color: orchid;
+}
+
+#ps2{
+    background-color: orchid;
+}
+
+p {
+    text-align: center;
 }
