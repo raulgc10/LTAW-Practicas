@@ -5,7 +5,7 @@ h1 {
 
 }
 body{
-    background-color: black;
+    background-image: url(wallpaper4.png);
 }
 
 h2 {
@@ -21,10 +21,17 @@ h2 {
 
 #psx{
     background-color: orchid;
+    border-radius: 20px;
 }
 
 #ps2{
     background-color: orchid;
+    border-radius: 20px;
+}
+
+#GBC{
+    background-color: orchid;
+    border-radius: 20px;
 }
 
 p {
