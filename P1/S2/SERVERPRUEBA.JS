@@ -23,8 +23,8 @@ const server = http.createServer((req, res) => {
   // Lee el archivo
   fs.readFile(path.join(__dirname, filePath), (err, content) => {
     if (err) {
-        res.writeHead(404);
-        res.end('Archivo no encontrado');
+        res.writeHead(404, { 'Content-Type': contentType });
+        res.end(content, 'utf-8');
 
     }
     else {
