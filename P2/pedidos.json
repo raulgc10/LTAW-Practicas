@@ -1,0 +1,14 @@
+[
+    {
+        "idpedido": "1",
+        "product1": "Final Fantasy VII",
+        "product2": "PES 6",
+        "totalcost": "220€"
+    },
+    {
+        "idpedido": "2",
+        "product1": "Final Fantasy VIII",
+        "product2": "PES 6",
+        "totalcost": "220€"
+    }
+]
