@@ -5,7 +5,8 @@ h1 {
 
 }
 body{
-    background-image: url(wallpaper4.png);
+    background-image: url(wall.jpg);
+    background-size: cover;
 }
 
 h2 {
@@ -21,8 +22,9 @@ h2 {
 }
 
 #psx{
-    background-color: orchid;
+    background-color:orchid;
     border-radius: 20px;
+
 }
 
 #ps2{
