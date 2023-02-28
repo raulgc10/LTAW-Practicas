@@ -14,6 +14,7 @@ h2 {
     font-family: fuente, Arial, Helvetica, sans-serif;
 }
 
+
 @font-face{
     font-family: "fuente";
     src: url(fuente.otf);
@@ -36,4 +37,11 @@ h2 {
 
 p {
     text-align: center;
+}
+
+h3 {
+    color:white;
+    text-align: center;
+    font-family: fuente, Arial, Helvetica, sans-serif;
+
 }
