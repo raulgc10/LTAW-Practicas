@@ -3,6 +3,8 @@ const fs = require('fs');
 //-- Npmbre del fichero JSON a leer
 const USERS = "users.json"
 
+const products_OUT = "products-modificacion.json"
+
 const PRODUCTS = "products.json"
 
 const order = "pedidos.json"
@@ -16,6 +18,7 @@ const usuarios = JSON.parse(users_json);
 const productos = JSON.parse(PRODUCTS_JSON);
 const pedidos = JSON.parse(PEDIDOS_JSON);
 
+pedidos[1]["stock"] = "11"
 
 //-- Mostrar informacion sobre la tienda
 console.log("Productos en la tienda: " + productos.length);
@@ -37,3 +40,9 @@ pedidos.forEach((element, index)=>{
     console.log("Pedido: " + (index + 1) + ": " + element["idpedido"]);
 });
   
+let myJSON = JSON.stringify(pedidos);
+
+//-- Guardarla en el fichero destino
+fs.writeFileSync(products_OUT, myJSON);
+
+console.log("Información guardada en fichero: " + products_OUT);
