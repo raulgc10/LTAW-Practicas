@@ -1,0 +1,138 @@
+{
+    "users": [
+        {
+            "username": "admin",
+            "password": "1234"
+        },
+        {
+            "username": "client",
+            "password": "client1234"
+        }
+    ],
+    "products": [
+        {
+            "name": "Resident Evil 2",
+            "status": "Casi Nuevo",
+            "cost": "49,99€",
+            "stock": "10"
+        },
+        {
+            "name": "Final Fantasy VII",
+            "status": "Precintado",
+            "cost": "130€",
+            "stock": "10"
+        },
+        {
+            "name": "Final Fantasy VIII",
+            "status": "Casi Nuevo",
+            "cost": "40€",
+            "stock": "10"
+        },
+        {
+            "name": "Metal Gear Solid",
+            "status": "Agotado",
+            "stock": "0"
+            
+        },
+        {
+            "name": "Silent Hill",
+            "status": "Casi Nuevo",
+            "cost": "100€",
+            "stock": "10"
+        },
+        {
+            "name": "Castlevania: Simphony of the Night",
+            "status": "Precintado",
+            "cost": "200€",
+            "stock": "10"
+        },
+        {
+            "name": "Resident Evil 4",
+            "status": "Muy usado",
+            "cost": "20€",
+            "stock": "10"
+        },
+        {
+            "name": "Dragon Quest VIII",
+            "status": "Algo usado",
+            "cost": "40€",
+            "stock": "10"
+        },
+        {
+            "name": "PES 6",
+            "status": "Precintado",
+            "cost": "90€",
+            "stock": "10"
+        },
+        {
+            "name": "Metal Gear Solid 3",
+            "status": "Casi Nuevo",
+            "cost": "50€",
+            "stock": "10"
+        },
+        {
+            "name": "GTA San Andreas",
+            "status": "Usado",
+            "cost": "20€",
+            "stock": "10"
+        },
+        {
+            "name": "Silent Hill 2",
+            "status": "Precintado",
+            "cost": "600€",
+            "stock": "10"
+        },
+        {
+            "name": "Pokémon Rojo",
+            "status": "Precintado",
+            "cost": "450€",
+            "stock": "10"
+        },
+        {
+            "name": "Wario Land 3",
+            "status": "Usado",
+            "cost": "30€",
+            "stock": "10"
+        },
+        {
+            "name": "Metal Gear Solid",
+            "status": "Agotado",
+            "stock": "0"
+            
+        },
+        {
+            "name": "The legend of Zelda: Link's awakening",
+            "status": "Casi Nuevo",
+            "cost": "50€",
+            "stock": "10"
+        },
+        {
+            "name": "Pokémon Oro",
+            "status": "Precintado",
+            "cost": "170€",
+            "stock": "10"
+        },
+        {
+            "name": "Harvest Moon 2",
+            "status": "Usado",
+            "cost": "30€",
+            "stock": "10"
+        }
+    
+    ],
+    "orders": [
+        {
+            "idpedido": "1",
+            "product1": "Final Fantasy VII",
+            "product2": "PES 6",
+            "totalcost": "220€"
+        },
+        {
+            "idpedido": "2",
+            "product1": "Final Fantasy VIII",
+            "product2": "PES 6",
+            "totalcost": "220€"
+        }
+    ]
+
+}

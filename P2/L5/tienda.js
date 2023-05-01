@@ -1,4 +1,8 @@
 const fs = require('fs');
+const http = require('http');
+const path = require('path');
+
+const port = 9000;
 
 //-- Npmbre del fichero JSON a leer
 const USERS = "users.json"
