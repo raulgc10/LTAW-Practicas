@@ -1,7 +1,6 @@
 const fs = require('fs');
 const http = require('http');
 const path = require('path');
-const url = require('url');
 
 //-- Nombre del fichero JSON a leer
 const SHOP = "tienda.json"
@@ -48,22 +47,6 @@ const server = http.createServer((req, res) => {
     contentType = "image/png"
   }
 
-  if (req.url === '/productos') {
-    // Si se solicita la URL /productos, leer los productos del archivo tienda.json
-    fs.readFile(path.join(__dirname, 'tienda.json'), (err, data) => {
-      if (err) {
-        // Si hay un error al leer el archivo, enviar una respuesta con código 500 y un mensaje de error
-        res.writeHead(500, { 'Content-Type': 'text/plain' });
-        res.end('Error interno del servidor');
-        console.log('Error interno del servidor');
-      } else {
-        // Si se puede leer el archivo, parsear el contenido como un objeto JSON y enviar una respuesta con código 200 y los productos
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify(TIENDA.products));
-        console.log('Productos enviados');
-      }
-    });
-  }
 
   // Lee el archivo
   fs.readFile(path.join(__dirname, filePath), (err, content) => {
