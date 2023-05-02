@@ -11,25 +11,6 @@ const  SHOP_json = fs.readFileSync(SHOP);
 //-- Crear la estructura tienda a partir del contenido del fichero
 const TIENDA = JSON.parse(SHOP_json);
 
-//-- Mostrar informacion sobre la tienda
-console.log("Productos en la tienda: " + TIENDA.products.length);
-//-- Usuarios
-console.log("Usuarios registrados: " + TIENDA.users.length);
-//-- Pedidos pendientes
-console.log("Pedidos pendientes: " + TIENDA.orders.length);
-
-
-//-- Recorrer el array de productos
-TIENDA.products.forEach((element, index)=>{
-  console.log("Producto: " + (index + 1) + ": " + element["name"]);
-});
-//-- Recorrer el array de usuarios
-TIENDA.users.forEach((element, index)=>{
-    console.log("Nombre: " + (index + 1) + ": " + element["username"]);
-});
-TIENDA.orders.forEach((element, index)=>{
-    console.log("Pedido: " + (index + 1) + ": " + element["idpedido"]);
-});
 
 const server = http.createServer((req, res) => {
   // Ruta del archivo solicitado
@@ -46,23 +27,6 @@ const server = http.createServer((req, res) => {
     contentType = "image/jpg"
   } else if (extname === '.png') {
     contentType = "image/png"
-  }
-
-  if (req.url === '/productos') {
-    // Si se solicita la URL /productos, leer los productos del archivo tienda.json
-    fs.readFile(path.join(__dirname, 'tienda.json'), (err, data) => {
-      if (err) {
-        // Si hay un error al leer el archivo, enviar una respuesta con código 500 y un mensaje de error
-        res.writeHead(500, { 'Content-Type': 'text/plain' });
-        res.end('Error interno del servidor');
-        console.log('Error interno del servidor');
-      } else {
-        // Si se puede leer el archivo, parsear el contenido como un objeto JSON y enviar una respuesta con código 200 y los productos
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify(TIENDA.products));
-        console.log('Productos enviados');
-      }
-    });
   }
 
   // Lee el archivo
