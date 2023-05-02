@@ -11,9 +11,17 @@ const  SHOP_json = fs.readFileSync(SHOP);
 //-- Crear la estructura tienda a partir del contenido del fichero
 const TIENDA = JSON.parse(SHOP_json);
 
+const RESPUESTA = fs.readFileSync('response.html', 'utf-8');
 
 const server = http.createServer((req, res) => {
   // Ruta del archivo solicitado
+  const myURL = new URL(req.url, 'http://' + req.headers['host']);  
+  console.log("");
+  console.log("Método: " + req.method);
+  console.log("Recurso: " + req.url);
+  console.log("  Ruta: " + myURL.pathname);
+  console.log("  Parametros: " + myURL.searchParams);
+
   const filePath = req.url === '/' ? '/index.html' : req.url;
   const extname = path.extname(filePath);
 
@@ -39,6 +47,14 @@ const server = http.createServer((req, res) => {
     else {
       // Archivo encontrado
       res.writeHead(200, { 'Content-Type': contentType });
+      let username = myURL.searchParams.get('username');
+      let password = myURL.searchParams.get('password');
+
+      if ((username == "root" || username == "client") && password == "1234"){
+        console.log("Usuario correcto")
+      }
+      console.log(" Nombre: " + username);
+      console.log(" password: " + password); 
       res.end(content, 'utf-8');
     }
   });
