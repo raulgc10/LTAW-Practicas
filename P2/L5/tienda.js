@@ -99,8 +99,16 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { 'Content-Type': contentType });
       let user = get_user(req);
       console.log(user);
-      res.end(content, 'utf-8');
+      if (myURL.pathname == '/'){
+        if (user === "root"){
+          content = fs.readFileSync('indexroot.html', 'utf-8');
+        } else if (user === "client"){
+          content = fs.readFileSync('indexclient.html', 'utf-8');
+        }
+      }
     }
+        
+      res.end(content, 'utf-8');
   });
   });
 
