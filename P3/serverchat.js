@@ -3,6 +3,7 @@ const socket = require('socket.io');
 const http = require('http');
 const express = require('express');
 const colors = require('colors');
+const fs = require('fs');
 
 const PUERTO = 9000;
 
@@ -16,12 +17,14 @@ const server = http.Server(app);
 //-- Crear el servidor de websockets, asociado al servidor http
 const io = socket(server);
 
+const chat = fs.readFileSync('chat.html','utf-8')
+
 //-- Inicializamos la variable de users
 let users = 0;
 //-------- PUNTOS DE ENTRADA DE LA APLICACION WEB
 //-- Definir el punto de entrada principal de mi aplicación web
 app.get('/', (req, res) => {
-  res.send('Bienvenido a mi aplicación Web!!!' + '<p><a href="/chat.html">Test</a></p>');
+  res.send(chat);
 });
 
 //-- Esto es necesario para que el servidor le envíe al cliente la
