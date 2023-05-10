@@ -35,12 +35,12 @@ app.use(express.static('public'));
 //-- Evento: Nueva conexion recibida
 io.on('connect', (socket) => {
   users = users + 1;
-  console.log('** NUEVA CONEXIÓN **'.yellow);
+  console.log('** NUEVA CONEXIÓN **'.green);
   socket.send("Bienvenido al chat")
   io.send("Se ha conectado un nuevo usuario");
   //-- Evento de desconexión
   socket.on('disconnect', function(){
-    console.log('** CONEXIÓN TERMINADA **'.yellow);
+    console.log('** CONEXIÓN TERMINADA **'.red);
     users = users - 1;
   });  
 
