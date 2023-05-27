@@ -15,7 +15,7 @@
     <!-- Cargar el proceso asociado a esta página -->
     <script src="index.js" defer></script>
 
-    <title>Mi APP (version 11)</title>
+    <title>Mi APP (version 12)</title>
 </head>
 <body>
     <h1>INTERFAZ GRÁFICA</h1>
@@ -24,16 +24,17 @@
     <hr>
     <h2>Información:</h2>
     <ul>
-        <li>Arquitectura: <span id="info1" class="blue"></span> </li>
-        <li>Plataforma: <span id="info2" class="blue"></span></li>
-        <li>Diretorio: <span id="info3" class="blue"></span></li>
+        <li>Node: <span id="info1" class="blue"></span> </li>
+        <li>Electron: <span id="info2" class="blue"></span></li>
+        <li>Chrome: <span id="info3" class="blue"></span></li>
     </ul>
-
+    <h2>Usuarios activos</h2>
+    <span id="users" class="blue"></span>
+    <h2>IP del servidor</h2>
+        <a href="http://127.0.0.1:9000">http://127.0.0.1:9000</a>
     <hr>
-    <p>Mensajes enviados desde el proceso main:</p>
-    <p>Print:  <span id='print' class="red"></span> </p>
-    <p>   <input type="button" value="Test" id="btn_test"> </p>
-   <p>Display:</p>
+    <p>   <input type="button" value="Botón de prueba" id="btn_test"> </p>
+    <p>Display:</p>
     <p id="display"></p>
 </body>
 </html>
