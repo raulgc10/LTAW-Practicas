@@ -1,0 +1,46 @@
+body{
+    text-align: center;
+    background-color:black;
+    color:darkturquoise;
+}
+p{
+    text-align: center;
+    color:darkturquoise;
+    font-family: fuente, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+h2{
+    color: darkturquoise;
+    font-family: fuente, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#display{
+    background-color: darkslategray;
+    width: 800px;
+    display: inline-block;
+    border: 2px solid darkturquoise;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: fuente, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3{
+    text-decoration: underline;
+    font-family: fuente, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@font-face{
+    font-family: "fuente";
+    src: url(fuente.otf);
+}
+
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
