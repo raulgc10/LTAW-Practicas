@@ -8,7 +8,7 @@ const info2 = document.getElementById("info2");
 const info3 = document.getElementById("info3");
 const print = document.getElementById("print");
 const users = document.getElementById("users");
-
+const ip = document.getElementById("IP");
 //-- Acceder a la API de node para obtener la info
 //-- Sólo es posible si nos han dado permisos desde
 //-- el proceso princpal
@@ -17,6 +17,7 @@ info2.textContent = process.versions.electron;
 info3.textContent = process.versions.chrome;
 
 users.textContent = 0;
+
 
 btn_test.onclick = () => {
     display.innerHTML += "He pulsado el botón" + "</br>";
@@ -34,4 +35,7 @@ btn_test.onclick = () => {
 
   electron.ipcRenderer.on('users', (event, message) => {
     users.textContent = message;
+  });
+  electron.ipcRenderer.on('IP', (event, message) => {
+    IP.textContent = message;
   });
