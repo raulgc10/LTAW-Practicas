@@ -1,0 +1,49 @@
+h1 {
+    color:white;
+    text-align: center;
+    font-family: fuente, Arial, Helvetica, sans-serif;
+
+}
+body{
+    background-image: url(wall.jpg);
+    background-size: cover;
+}
+
+h2{
+    color:white;
+    text-align: center;
+    font-family: fuente, Arial, Helvetica, sans-serif;
+
+}
+h3 {
+    color:darkviolet;
+    text-align: center;
+    font-family: fuente, Arial, Helvetica, sans-serif;
+}
+
+@font-face{
+    font-family: "fuente";
+    src: url(fuente.otf);
+}
+
+#image{
+    float: left;
+    width: 30%;
+    margin-left: 100px;
+}
+#specs{
+    float: center;
+    text-align: center;
+    width: 70%;
+    height: 400px;
+    background-color: orchid;
+    border-radius: 30px;
+}
+
+#comprar{
+    background-color: aquamarine;
+    color: darkorchid;
+    border-radius: 3px;
+    border-color: darkorchid;
+
+}
