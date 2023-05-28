@@ -1,6 +1,7 @@
 //-- Cargar el módulo de electron
 const electron = require('electron');
-const ip = require('ip');
+
+
 console.log("Arrancando electron...");
 
 //-- Variable para acceder a la ventana principal
@@ -32,7 +33,7 @@ electron.app.on('ready', () => {
   //-- y luego enviar el mensaje al proceso de renderizado para que 
   //-- lo saque por la interfaz gráfica
   win.on('ready-to-show', () => {
-    win.webContents.send('IP', `http://${ip.address()}:${PUERTO}`);
+    win.webContents.send('IP', `http://${ip.address()}:${PUERTO}`);  
   });
 
 });
@@ -49,6 +50,8 @@ const http = require('http');
 const express = require('express');
 const colors = require('colors');
 const fs = require('fs');
+const ip = require('ip');
+
 
 const PUERTO = 9000;
 

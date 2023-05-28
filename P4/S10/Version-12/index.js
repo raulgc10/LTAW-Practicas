@@ -1,4 +1,6 @@
 const electron = require('electron');
+
+
 console.log("Hola desde el proceso de la web...");
 //-- Obtener elementos de la interfaz
 const btn_test = document.getElementById("btn_test");
@@ -38,4 +40,7 @@ btn_test.onclick = () => {
   });
   electron.ipcRenderer.on('IP', (event, message) => {
     IP.textContent = message;
+  });
+  electron.ipcRenderer.on('QR', (event, message) => {
+    QR.textContent = message;
   });
