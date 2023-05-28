@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self';" />
 
     <!-- Hoja de estilo de la interfaz -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat.css">
 
     <!-- Cargar el proceso asociado a esta página -->
     <script src="index.js" defer></script>
@@ -18,20 +18,19 @@
     <title>Chat Online</title>
 </head>
 <body>
-    <h1>INTERFAZ GRÁFICA</h1>
-    <img src="logo-urjc.png" alt="Logo-URJC" width=150px>
+    <img src="LOGO.png" alt="Logo-URJC" width=150px>
 
     <hr>
     <h2>Información:</h2>
     <ul>
-        <li>Node: <span id="info1" class="blue"></span> </li>
-        <li>Electron: <span id="info2" class="blue"></span></li>
-        <li>Chrome: <span id="info3" class="blue"></span></li>
+        <p>Node: <span id="info1" class="blue"></span></p>
+        <p>Electron: <span id="info2" class="blue"></span></p>
+        <p>Chrome: <span id="info3" class="blue"></span></p>
     </ul>
     <h2>Usuarios activos</h2>
-    <span id="users" class="blue"></span>
+    <p><span id="users" class="blue"></span></p>
     <h2>IP del servidor</h2>
-    <span id="IP" class="blue"></span>
+    <p><span id="IP" class="blue"></span></p>
     <hr>
     <p>   <input type="button" value="Botón de prueba" id="btn_test"> </p>
     <p>Display:</p>

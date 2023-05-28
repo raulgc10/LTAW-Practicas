@@ -3,6 +3,12 @@ body{
     background-color:black;
     color:darkturquoise;
 }
+p{
+    text-align: center;
+    color:darkturquoise;
+    font-family: fuente, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 
 h2{
     color: darkturquoise;
